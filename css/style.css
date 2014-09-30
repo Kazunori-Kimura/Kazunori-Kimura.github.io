@@ -11,6 +11,7 @@ body {
   font-family: Helvetica, arial, freesans, clean, sans-serif;
   background: url("../images/background.jpg") no-repeat top center;
   background-attachment: fixed;
+  background-color: #3f48cc;
 }
 a {
   color: #fff;
