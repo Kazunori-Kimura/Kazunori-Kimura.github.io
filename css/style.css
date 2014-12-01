@@ -9,9 +9,13 @@ body {
   margin-bottom: 60px;
   color: #fff;
   font-family: Helvetica, arial, freesans, clean, sans-serif;
-  background: url("../images/background.jpg") no-repeat top center;
-  background-attachment: fixed;
-  background-color: #3f48cc;
+  background-color: white;
+  background: -webkit-linear-gradient(-45deg, #a06813 0%, #d0b342 48%, #d8bd53 48.001%, white 100%);
+  background: -moz-linear-gradient(-45deg, #a06813 0%, #d0b342 48%, #d8bd53 48.001%, white 100%);
+  background: -ms-linear-gradient(-45deg, #a06813 0%, #d0b342 48%, #d8bd53 48.001%, white 100%);
+  background: -o-linear-gradient(-45deg, #a06813 0%, #d0b342 48%, #d8bd53 48.001%, white 100%);
+  background: linear-gradient(135deg, #a06813 0%, #d0b342 48%, #d8bd53 48.001%, white 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorStr='#a06813', EndColorStr='white');
 }
 a {
   color: #fff;
