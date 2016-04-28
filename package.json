@@ -1,0 +1,26 @@
+{
+  "name": "Kazunori-Kimura.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kazunori-Kimura/Kazunori-Kimura.github.io.git"
+  },
+  "keywords": [],
+  "author": "Kazunori Kimura <kazunori.kimura.js@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kazunori-Kimura/Kazunori-Kimura.github.io/issues"
+  },
+  "homepage": "https://github.com/Kazunori-Kimura/Kazunori-Kimura.github.io#readme",
+  "dependencies": {
+    "sanitize.css": "^3.3.0"
+  }
+}
