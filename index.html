@@ -12,253 +12,372 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <title>KAZUNORI KIMURA - Web Application Programer</title>
+  <title>Document</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Roboto" rel="stylesheet">
   <style>
     html,
     body {
       margin: 0;
       padding: 0;
-      color: #333333;
-      background-color: #fafafa;
+      color: #394648;
+      background-color: #edebd7;
       font-family: 'Roboto', 'Noto Sans JP', sans-serif;
-    }
-
-    h1 {
-      color: #fe4b4b;
-    }
-    h2 {
-      color: #333366;
-    }
-    h2::before {
-      content: '◆';
-      margin-right: 6px;
-    }
-    h3 {
-      color: #1c1cc7;
-    }
-    
-    @media (min-width: 1024px) {
-      .container {
-        width: 100%;
-        height: 100%;
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: 200px 300px 1fr 60px;
-        grid-template-areas: 'g0 g1' 'info info' 'g3 g2' 'footer footer';
-      }
-    }
-
-    .area-g0 {
-      grid-area: g0;
-      padding: 0 10px;
-    }
-
-    .area-g0 h1 {
-      font-size: 5em;
-      font-weight: 900;
-      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      margin-top: 20px;
-    }
-
-    .area-g0 h1 small {
-      display: block;
-      font-size: 0.5em;
-      font-weight: 100;
-    }
-
-    .area-g1 {
-      grid-area: g1;
-    }
-
-    .area-info {
-      grid-area: info;
-      padding: 0 10px;
-    }
-    .area-info section {
+      line-height: 1.67;
       display: flex;
+      flex-direction: column;
     }
-    .area-info section .card {
-      width: 620px;
-      height: 200px;
-      box-shadow:3px 3px 3px 0px #e6e5eb;
-      border-radius:6px;
-      border:1px solid #cccccc;
-      padding: 10px;
-      margin: 5px;
+
+    .jumbotron {
       display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
     }
 
-    .area-info section .card .message {
-      margin-left: 10px;
-    }
-
-    .area-g2 {
-      grid-area: g2;
-    }
-
-    .area-g3 {
-      grid-area: g3;
-      padding: 0 16px;
-    }
-
-    .area-footer {
-      grid-area: footer;
-      text-align: center;
-      padding-top: 20px;
-    }
-
-    section.project {
-      margin-top: 10px;
-      margin-bottom: 10px;
-      margin-right: 20px;
-      padding: 0 10px;
-
-      /*
-      box-shadow:3px 3px 3px 0px #e6e5eb;
-      border-radius:6px;
-      border:1px solid #cccccc;
-      */
+    .jumbotron-border {
       display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #67cafc;
+      border-bottom: 2px solid #ffffff;
+      width: 100%;
+      height: 300px;
     }
 
-    section.project .date {
-      margin-top: 20px;
-      width: 160px;
-      color: #666666;
+    .jumbotron-border h1,
+    .jumbotron-border p {
+      margin: 0;
+      padding: 0;
     }
 
-    section.project .project-info {
+    .jumbotron-icon {
+      width: 120px;
+      height: 120px;
+      margin-top: -70px;
+    }
+
+    .icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .icon {
+      font-size: 1.8em;
+    }
+
+    .icons a {
+      text-decoration: none;
+      color: #546a7b;
+      margin: 0 6px;
+    }
+
+    .content {
       flex: 1;
-      border-left: 1px solid #cccccc;
-      padding-left: 15px;
+      width: 800px;
+      margin: 0 auto;
+    }
+
+    .prof {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .lead {
+      font-size: 1.4em;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    .prof p {
+      text-align: center;
+    }
+
+    .skill {
+      display: flex;
+      flex-direction: row;
+      background: #ffffff;
+      border-radius: 6px;
+      padding: 6px 16px;
+    }
+
+    .skill div {
+      flex: 1;
+    }
+
+    .footer {
+      position: relative;
+      height: 50px;
+      background-color: #546a7b;
+      color: #fafafa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .goTop {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .goTop a {
+      text-decoration: none;
+      color: #fcfcfc;
+    }
+
+    /* card */
+    .card-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      padding-bottom: 16px;
+    }
+
+    .card {
+      width: 350px;
+      background-color: #ffffff;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px #ccc;
+      margin: 0 10px;
+    }
+
+    .card-image {
+      border-radius: 6px 6px 0 0;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .card-content {
+      padding: 16px;
+    }
+
+    .card-link {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+    }
+
+    .card-link a {
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    /* project timeline */
+    .project {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .date {
+      margin-top: 20px;
+      width: 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .timeline {
+      width: 20px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      color: #1674a3;
+    }
+
+    .circle {
+      position: absolute;
+      top: 28px;
+      font-size: 0.6em;
+    }
+
+    .border {
+      border-right: 2px solid #1674a3;
+      flex: 1;
+    }
+
+    .balloon {
+      flex: 1;
+      position: relative;
+      display: inline-block;
+      margin: 5px 5px 5px 15px;
+      padding: 16px;
+      min-width: 120px;
+      max-width: 100%;
+      color: #555;
+      font-size: 16px;
+      background: #ffffff;
+      border-radius: 6px;
+    }
+
+    .balloon h3 {
+      margin: 0;
+      padding: 0;
+    }
+
+    .balloon hr {
+      border-bottom: #edebd7;
+      margin: 0 0 1em 0;
+    }
+
+    .balloon:before {
+      content: "";
+      position: absolute;
+      top: 28px;
+      left: -30px;
+      margin-top: -15px;
+      border: 15px solid transparent;
+      border-right: 15px solid #ffffff;
     }
   </style>
 </head>
 
 <body>
-  <div class='container'>
-    <div class='area-g0'>
-      <h1>KAZUNORI KIMURA
-        <small>Web Application Programer</small>
-      </h1>
+  <div class="jumbotron">
+    <div class="jumbotron-border">
+      <h1>木村 憲規</h1>
+      <p>Kimura Kazunori</p>
+      <p>(Web Application Programer)</p>
+      <div class="icons">
+        <a class="icon" href="https://twitter.com/KazunoriJs" target="_blank">
+          <i class="fab fa-twitter-square"></i>
+        </a>
+        <a class="icon" href="https://github.com/Kazunori-Kimura" target="_blank">
+          <i class="fab fa-github-square"></i>
+        </a>
+        <a href="https://qiita.com/Kazunori-Kimura" target="_blank">
+          Qiita <i class="fa fa-share-square"></i>
+        </a>
+        <a href="https://speakerdeck.com/kazunorikimura" target="_blank">
+          Speaker Deck <i class="fa fa-share-square"></i>
+        </a>
+        <a class="icon" href="mailto:kazunori.kimura.js@gmail.com">
+          <i class="fa fa-envelope-square"></i>
+        </a>
+      </div>
     </div>
-    <div class='area-g1'>
-      <ul>
-        <li>Mail: kazunori.kimura.js@gmail.com</li>
-        <li>Twitter:
-          <a href="https://twitter.com/KazunoriJs" target="_blank">@KazunoriJs</a>
-        </li>
-        <li>GitHub:
-          <a href="https://github.com/Kazunori-Kimura" target="_blank">Kazunori-Kimura</a>
-        </li>
-        <li>Qiita:
-          <a href="https://qiita.com/Kazunori-Kimura" target="_blank">Kazunori-Kimura</a>
-        </li>
-        <li>Speaker Deck:
-          <a href="https://speakerdeck.com/kazunorikimura" target="_blank">Kazunori-Kimura</a>
-        </li>
-      </ul>
-    </div>
+    <img src="icon.png" alt="person" class="jumbotron-icon">
+  </div>
+  <div class="content">
+    <section class="prof">
+      <p class="lead">豊富な経験をもとにした確かなアウトプットをお約束します</p>
+      <p>
+        ITエンジニア歴17年、フリーランスになって8年。<br>
+        特にJavaScriptに強く、Node.jsによるサーバーサイド実装からReactによるフロントエンド実装はもちろん<br>
+        ReactNativeによるハイブリッド型のスマホアプリ実装も対応可能です。<br>
+        <br>
+        ご要望があれば、AWSインフラ設計・構築も対応いたします。
+      </p>
+    </section>
 
-    <div class="area-info">
-      <h2>お知らせ</h2>
-      <section>
-        <div class="card">
-          <div class="image">
-            <img src="image.001.jpeg" alt="udemy" width=180>
-          </div>
-          <div class="message">
-              Udemy にて <a href="https://www.udemy.com/aspnet-mvcweb/" target="_blank">ASP.NET MVCでWebアプリ開発のノウハウを学ぼう！</a> という講座を公開しています！<br>
-              ASP.NET MVC 5 と EntityFramework 6 によるWebアプリケーション開発をステップ・バイ・ステップで解説しています。
-          </div>
+    <section>
+      <h2>スキル</h2>
+      <div class="skill">
+        <div>
+          <h3>Web Frontend</h3>
+          <ul>
+            <li>HTML</li>
+            <li>CSS
+              <ul>
+                <li>CSS3</li>
+                <li>Sass</li>
+              </ul>
+            </li>
+            <li>JavaScript
+              <ul>
+                <li>React
+                  <ul>
+                    <li>redux</li>
+                    <li>redux-saga</li>
+                  </ul>
+                </li>
+                <li>Riot.js</li>
+                <li>Knockout.js</li>
+                <li>jQuery</li>
+              </ul>
+            </li>
+          </ul>
         </div>
-        <div class="card">
-          <div class="image">
-            <img src="presentation_man.png" alt="LT" height=180>
-          </div>
-          <div class="message">
-            毎月大阪でライトニングトーク会を開催しています。
-            申し込みは connpass からお願いします！<br>
-            <a href="https://anket.connpass.com/" target="_blank">【大阪】ITエンジニアのLT大会</a>
-          </div>
+        <div>
+          <h3>Server Side</h3>
+          <ul>
+            <li>ASP.NET (C#,VB.NET)</li>
+            <li>Node.js
+              <ul>
+                <li>express</li>
+                <li>koa</li>
+              </ul>
+            </li>
+            <li>Java
+              <ul>
+                <li>Java Servlet (Java EE)</li>
+                <li>Jarsey</li>
+                <li>Spring MVC</li>
+              </ul>
+            </li>
+            <li>PHP</li>
+          </ul>
         </div>
-      </section>
-    </div>
-
-    <div class='area-g2'>
-      <section>
-        <h2>最終学歴</h2>
-        <p>関西大学 総合情報学部 (2002年3月卒業)</p>
-      </section>
-      <section>
-        <h2>スキル</h2>
-        <h3>Web Frontend</h3>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript
-            <ul>
-              <li>React
-                <ul>
-                  <li>redux</li>
-                  <li>redux-saga</li>
-                </ul>
-              </li>
-              <li>Riot.js</li>
-              <li>Knockout.js</li>
-              <li>jQuery</li>
-            </ul>
-          </li>
-        </ul>
-        <h3>Server Side</h3>
-        <ul>
-          <li>ASP.NET (C#,VB.NET)</li>
-          <li>Node.js
-            <ul>
-              <li>express</li>
-              <li>koa</li>
-            </ul>
-          </li>
-          <li>Java
-            <ul>
-              <li>Java Servlet (Java EE)</li>
-              <li>Jarsey</li>
-              <li>Spring MVC</li>
-            </ul>
-          </li>
-          <li>PHP</li>
-        </ul>
-        <h3>Mobile</h3>
-        <ul>
-          <li>ReactNative</li>
-          <li>Objective-C</li>
-        </ul>
-        <h3>Database</h3>
-        <ul>
-          <li>PostgreSQL</li>
-          <li>SQL Server</li>
-          <li>Redis</li>
-        </ul>
-        <h3>Cloud</h3>
-        <ul>
-          <li>AWS</li>
-        </ul>
-      </section>
-    </div>
-    <div class='area-g3'>
+        <div>
+          <h3>Mobile</h3>
+          <ul>
+            <li>ReactNative</li>
+            <li>Objective-C</li>
+          </ul>
+          <h3>Database</h3>
+          <ul>
+            <li>PostgreSQL</li>
+            <li>SQL Server</li>
+            <li>Redis</li>
+          </ul>
+          <h3>Cloud</h3>
+          <ul>
+            <li>AWS</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
       <h2>経歴</h2>
-      <section class="project">
-        <span class="date">2018/10-2019/02</span>
-        <div class="project-info">
+      <div class="project">
+        <div class="date">
+          <span class="date-from">2019-02</span>
+          <i class="fa fa-arrows-alt-v"></i>
+          <span class="date-to">2018-10</span>
+        </div>
+        <div class="timeline">
+          <i class="fa fa-circle circle"></i>
+          <div class="border"></div>
+        </div>
+        <div class="balloon">
           <h3 class="name">ホテル清掃管理システム構築</h3>
+          <hr>
           <div class="description">ホテルの客室のチェックイン状況と清掃状態を管理するシステムの設計・開発</div>
           <div class="in-charge">
             システムは WebAPI、Web管理画面、スマホアプリの3つから構成される。<br />
             そのうち WebAPIとWeb管理画面の方式設計、基本・詳細設計、実装、テストを担当
           </div>
           <div class="detail">
-            WebAPI: Node.js製 (express) のRESTful API。Amazon EC2上で稼働する。データベースは Amazon RDS (MySQL)。Amazon ElastiCache (Redis) を使用し、Firebase Cloud Messaging (FCM) のトークン管理と従業員同士の簡易チャット会話のPubSubを行った。
+            WebAPI: Node.js製 (express) のRESTful API。Amazon EC2上で稼働する。データベースは Amazon RDS (MySQL)。Amazon ElastiCache
+            (Redis) を使用し、Firebase Cloud Messaging (FCM) のトークン管理と従業員同士の簡易チャット会話のPubSubを行った。
             Amazon ELB で負荷分散および冗長化。<br />
             Web管理画面: React + redux + redux-saga + react-router-dom で構成されるSPA。
           </div>
@@ -298,17 +417,28 @@
             </ul>
           </div>
         </div>
-      </section>
-      <section class="project">
-        <span class="date">2018/04-2018/09</span>
-        <div class="project-info">
+      </div>
+      <div class="project">
+        <div class="date">
+          <span class="date-from">2018-09</span>
+          <i class="fa fa-arrows-alt-v"></i>
+          <span class="date-to">2018-04</span>
+        </div>
+        <div class="timeline">
+          <i class="fa fa-circle circle"></i>
+          <div class="border"></div>
+        </div>
+        <div class="balloon">
           <h3 class="name">AR経路案内アプリ開発</h3>
+          <hr>
           <div class="description">観光地などのスポットまでの経路情報をARで表示するスマートフォン向けアプリの設計・開発</div>
           <div class="in-charge">サーバー側(WebAPI)の方式設計、基本・詳細設計、実装、テストおよび管理画面の実装、アプリの一部画面実装を担当</div>
           <div class="detail">
-              WebAPI: Node.js製 (express) のRESTful API。Amazon EC2上で稼働する。データベースは Amazon RDS (MySQL)。Amazon ELB で負荷分散および冗長化。<br />
-              Web管理画面: React Adminで実装されたSPA。<br />
-              スマートフォン向けアプリ: iOS/Androidに対応。ReactNativeで実装、AR部分はネイティブ(Objective-C/Java)で実装。状態管理にRedux/redux-saga、画面遷移にReact Navigationを使用。
+            WebAPI: Node.js製 (express) のRESTful API。Amazon EC2上で稼働する。データベースは Amazon RDS (MySQL)。Amazon ELB で負荷分散および冗長化。<br />
+            Web管理画面: React Adminで実装されたSPA。<br />
+            スマートフォン向けアプリ:
+            iOS/Androidに対応。ReactNativeで実装、AR部分はネイティブ(Objective-C/Java)で実装。状態管理にRedux/redux-saga、画面遷移にReact
+            Navigationを使用。
           </div>
           <div class="tech">
             <h4>クラウド</h4>
@@ -335,11 +465,11 @@
                 </ul>
               </li>
               <li>App
-                  <ul>
-                    <li>ReactNative</li>
-                    <li>Redux</li>
-                    <li>redux-saga</li>
-                  </ul>
+                <ul>
+                  <li>ReactNative</li>
+                  <li>Redux</li>
+                  <li>redux-saga</li>
+                </ul>
               </li>
               <li>ServerSide
                 <ul>
@@ -349,14 +479,24 @@
             </ul>
           </div>
         </div>
-      </section>
-      <section class="project">
-        <span class="date">2016/05-2018/03</span>
-        <div class="project-info">
+      </div>
+      <div class="project">
+        <div class="date">
+          <span class="date-from">2018-03</span>
+          <i class="fa fa-arrows-alt-v"></i>
+          <span class="date-to">2016-05</span>
+        </div>
+        <div class="timeline">
+          <i class="fa fa-circle circle"></i>
+          <div class="border"></div>
+        </div>
+        <div class="balloon">
           <h3 class="name">製糸機械生産管理システム構築</h3>
+          <hr>
           <div class="description">製糸機械から生産情報をリアルタイムに取得しサーバーへ送信する常駐アプリケーションと、生産情報をデータベースに蓄積しWeb画面に表示するサーバー側アプリケーションの設計・開発</div>
           <div class="in-charge">サーバー側アプリケーションの方式設計、基本・詳細設計、実装、テストを担当</div>
-          <div class="detail">機械データは秒単位のため、処理速度を重視しリアルタイムのデータはRedisに格納、データを整形・抽出してPostgreSQLへ移す方式とした。Jersey(Java)のREST APIとKoa(JavaScript)のWebアプリケーションに役割を分けることで互いを疎結合とし、将来の拡張に対応できる構成とした。</div>
+          <div class="detail">機械データは秒単位のため、処理速度を重視しリアルタイムのデータはRedisに格納、データを整形・抽出してPostgreSQLへ移す方式とした。Jersey(Java)のREST
+            APIとKoa(JavaScript)のWebアプリケーションに役割を分けることで互いを疎結合とし、将来の拡張に対応できる構成とした。</div>
           <div class="tech">
             <h4>OS</h4>
             <ul>
@@ -392,11 +532,20 @@
             </ul>
           </div>
         </div>
-      </section>
-      <section class="project">
-        <span class="date">2015/12-2016/04</span>
-        <div class="project-info">
+      </div>
+      <div class="project">
+        <div class="date">
+          <span class="date-from">2016-04</span>
+          <i class="fa fa-arrows-alt-v"></i>
+          <span class="date-to">2015-12</span>
+        </div>
+        <div class="timeline">
+          <i class="fa fa-circle circle"></i>
+          <div class="border"></div>
+        </div>
+        <div class="balloon">
           <h3 class="name">太陽光発電 監視システム 機能追加</h3>
+          <hr>
           <div class="description">
             下記サブシステムの機能追加、修正
             <ul>
@@ -444,11 +593,20 @@
             </ul>
           </div>
         </div>
-      </section>
-      <section class="project">
-        <span class="date">2015/05-2015/10</span>
-        <div class="project-info">
+      </div>
+      <div class="project">
+        <div class="date">
+          <span class="date-from">2015-10</span>
+          <i class="fa fa-arrows-alt-v"></i>
+          <span class="date-to">2015-05</span>
+        </div>
+        <div class="timeline">
+          <i class="fa fa-circle circle"></i>
+          <div class="border"></div>
+        </div>
+        <div class="balloon">
           <h3 class="name">飲食店 予約管理システム開発</h3>
+          <hr>
           <div class="description">iPad向けネイティブアプリケーションの新規開発、Webアプリケーションの画面改修・機能追加</div>
           <div class="in-charge">飲食店の予約管理システムの開発において、プログラマーとして参加。デザイナーが作成したデザインを元に画面作成、設計、実装、テストを実施。</div>
           <div class="detail"></div>
@@ -479,11 +637,20 @@
             </ul>
           </div>
         </div>
-      </section>
-      <section class="project">
-        <span class="date">2014/10-2015/03</span>
-        <div class="project-info">
+      </div>
+      <div class="project">
+        <div class="date">
+          <span class="date-from">2015-03</span>
+          <i class="fa fa-arrows-alt-v"></i>
+          <span class="date-to">2014-10</span>
+        </div>
+        <div class="timeline">
+          <i class="fa fa-circle circle"></i>
+          <div class="border"></div>
+        </div>
+        <div class="balloon">
           <h3 class="name">調剤・服薬支援システム開発</h3>
+          <hr>
           <div class="description">病院・薬局にて医師・薬剤師が使用する、調剤・服薬支援システムの開発。</div>
           <div class="in-charge">既存デスクトップアプリおよびWeb版の改修、タブレット向けWebアプリケーションの新規開発。</div>
           <div class="detail">
@@ -518,12 +685,20 @@
             </ul>
           </div>
         </div>
-      </section>
-
-      <section class="project">
-        <span class="date">2014/07-2014/09</span>
-        <div class="project-info">
+      </div>
+      <div class="project">
+        <div class="date">
+          <span class="date-from">2014-09</span>
+          <i class="fa fa-arrows-alt-v"></i>
+          <span class="date-to">2014-07</span>
+        </div>
+        <div class="timeline">
+          <i class="fa fa-circle circle"></i>
+          <div class="border"></div>
+        </div>
+        <div class="balloon">
           <h3 class="name">製薬会社 社内申請ワークフローシステム開発</h3>
+          <hr>
           <div class="description">
             <ul>
               <li>Windows/iPad向けWebアプリケーションの新規開発</li>
@@ -564,12 +739,20 @@
             </ul>
           </div>
         </div>
-      </section>
-
-      <section class="project">
-        <span class="date">2012/02-2014/09</span>
-        <div class="project-info">
+      </div>
+      <div class="project">
+        <div class="date">
+          <span class="date-from">2014-09</span>
+          <i class="fa fa-arrows-alt-v"></i>
+          <span class="date-to">2012-02</span>
+        </div>
+        <div class="timeline">
+          <i class="fa fa-circle circle"></i>
+          <div class="border"></div>
+        </div>
+        <div class="balloon">
           <h3 class="name">MR営業情報管理システム開発</h3>
+          <hr>
           <div class="description">
             MR(製薬会社の営業担当者)の担当エリア・病院を地図上に表示し、営業成績を参考に担当エリアの割り当てを変更する地理情報システムの開発および機能追加。
           </div>
@@ -602,263 +785,79 @@
             </ul>
           </div>
         </div>
-      </section>
-
-      <section class="project">
-        <span class="date">2011/04-2012/01</span>
-        <div class="project-info">
-          <h3 class="name">コールセンター システムリプレース</h3>
-          <div class="description">
-            大手家電メーカーのコールセンター システムリプレース。
-            <br> 関東、関西の拠点に設置されているPCの全入れ替え。
-            <br> サーバー・クライアントOSの刷新に伴い、Active Directoryのセキュリティポリシーの再設計、設定作業。
-          </div>
-          <div class="in-charge">
-            <h4>担当範囲</h4>
-            <ul>
-              <li>ActiveDirectory セキュリティ・ポリシーの設計、設定作業</li>
-              <li>クライアントPCの設定内容の設計、クライアントPC移行ツールの設計、開発</li>
-              <li>コールセンターシステムのアプリケーション・サーバー構築</li>
-              <li>移行作業のプロジェクト管理</li>
-            </ul>
-          </div>
-          <div class="detail"></div>
-          <div class="tech">
-            <h4>OS</h4>
-            <ul>
-              <li>Windows Server 2012</li>
-              <li>Windows XP</li>
-              <li>RedHat Enterprise Linux</li>
-            </ul>
-            <h4>データベース</h4>
-            <ul>
-              <li>Oracle Database</li>
-            </ul>
-            <h4>アプリケーション サーバー</h4>
-            <ul>
-              <li>Apache&amp;Tomcat</li>
-            </ul>
-            <h4>言語/ライブラリ</h4>
-            <ul>
-              <li>移行ツール
-                <ul>
-                  <li>C#</li>
-                </ul>
-              </li>
-              <li>コールセンターシステム
-                <ul>
-                  <li>Java</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+      </div>
+      <div class="project">
+        <div class="date">
+          <span class="date-from">2012-02</span>
         </div>
-      </section>
-
-      <section class="project">
-        <span class="date">2009/04-2011/03</span>
-        <div class="project-info">
-          <h3 class="name">無線LAN認証システム導入</h3>
-          <div class="description">
-            大手家電メーカーの全国の事業所・向上への無線LANアクセスポイントおよび認証システムの導入
-          </div>
-          <div class="in-charge">
-            <h4>担当範囲</h4>
-            <ul>
-              <li>プロジェクト管理</li>
-              <li>無線LAN認証システムと社内認証基盤(ActiveDirectory)との連携設計</li>
-              <li>認証サーバー構築</li>
-            </ul>
-          </div>
-          <div class="detail"></div>
-          <div class="tech">
-            <h4>OS</h4>
-            <ul>
-              <li>Windows</li>
-              <li>RedHat Enterprise Linux</li>
-            </ul>
-            <h4>データベース</h4>
-            <ul>
-              <li>PostgreSQL</li>
-            </ul>
-            <h4>アプリケーション サーバー</h4>
-            <ul>
-              <li>Apache</li>
-            </ul>
-            <h4>言語/ライブラリ</h4>
-            <ul>
-              <li>PHP</li>
-            </ul>
-          </div>
+        <div class="timeline">
+          <i class="fa fa-circle circle"></i>
+          <div class="border"></div>
         </div>
-      </section>
-      <section class="project">
-        <span class="date">2008/04-2009/03</span>
-        <div class="project-info">
-          <h3 class="name">工場内警報監視システム開発</h3>
-          <div class="description">PLCの信号を監視し、警報受信すると警告メッセージを表示する常駐アプリケーションの開発</div>
-          <div class="in-charge">
-            <h4>担当範囲</h4>
-            <ul>
-              <li>PLC、セットトップボックスの仕様調査</li>
-              <li>要件定義、設計、開発、テスト</li>
-            </ul>
-          </div>
-          <div class="detail"></div>
-          <div class="tech">
-            <h4>OS</h4>
-            <ul>
-              <li>Windows</li>
-            </ul>
-            <h4>言語/ライブラリ</h4>
-            <ul>
-              <li>C#</li>
-            </ul>
-          </div>
+        <div class="balloon">
+          <h3>退職し、フリーランスに</h3>
         </div>
-      </section>
-      <section class="project">
-        <span class="date">2007/04-2008/03</span>
-        <div class="project-info">
-          <h3 class="name">工場内ポータルサイト構築</h3>
-          <div class="description">
-            大手家電メーカーの工場内にポータルサイトを構築
-          </div>
-          <div class="in-charge">
-            <ul>
-              <li>オープンソースCMS (EC-Cube) の導入</li>
-              <li>CMSと社内認証基盤との連携機能開発</li>
-            </ul>
-          </div>
-          <div class="detail"></div>
-          <div class="tech">
-            <h4>OS</h4>
-            <ul>
-              <li>RedHat Enterprise Linux</li>
-            </ul>
-            <h4>データベース</h4>
-            <ul>
-              <li>MySQL</li>
-            </ul>
-            <h4>アプリケーション サーバー</h4>
-            <ul>
-              <li>Apache</li>
-            </ul>
-            <h4>言語/ライブラリ</h4>
-            <ul>
-              <li>PHP</li>
-            </ul>
-          </div>
+      </div>
+      <div class="project">
+        <div class="date">
+          <span class="date-from">2012-02</span>
+          <i class="fa fa-arrows-alt-v"></i>
+          <span class="date-to">2002-04</span>
         </div>
-      </section>
-
-      <section class="project">
-        <span class="date">2007/01-2007/03</span>
-        <div class="project-info">
-          <h3 class="name">POSシステムリプレース</h3>
-          <div class="description">
-            POSシステムのVB6からC#への置き換え
-          </div>
-          <div class="in-charge">
-            <ul>
-              <li>進捗管理</li>
-              <li>実装、テスト</li>
-            </ul>
-          </div>
-          <div class="detail"></div>
-          <div class="tech">
-            <h4>OS</h4>
-            <ul>
-              <li>Windows XP for Embedded</li>
-            </ul>
-            <h4>データベース</h4>
-            <ul>
-              <li>SQL Server</li>
-            </ul>
-            <h4>言語/ライブラリ</h4>
-            <ul>
-              <li>C#</li>
-            </ul>
-          </div>
+        <div class="timeline">
+          <i class="fa fa-circle circle"></i>
+          <div class="border"></div>
         </div>
-      </section>
-
-      <section class="project">
-        <span class="date">2004/04-2007/03</span>
-        <div class="project-info">
-          <h3 class="name">ICカード認証システム 申請ワークフロー開発</h3>
-          <div class="description">
-            ICカードによるPC認証システムの導入と、ICカードの発行・PIN解除等の申請を行うワークフローシステムの開発
-          </div>
-          <div class="in-charge">
-            <h4>担当範囲</h4>
-            <ul>
-              <li>プロジェクト管理</li>
-              <li>社内認証基盤と申請ワークフローシステムとの連携機能の設計、実装</li>
-              <li>社内認証基盤とICカード認証システムとの連携機能の設計、実装</li>
-            </ul>
-          </div>
-          <div class="detail"></div>
-          <div class="tech">
-            <h4>OS</h4>
-            <ul>
-              <li>Windows</li>
-            </ul>
-            <h4>データベース</h4>
-            <ul>
-              <li>SQL Server</li>
-            </ul>
-            <h4>アプリケーション サーバー</h4>
-            <ul>
-              <li>IIS</li>
-            </ul>
-            <h4>言語/ライブラリ</h4>
-            <ul>
-              <li>ASP</li>
-            </ul>
-          </div>
+        <div class="balloon">
+          <h3>シャープビジネスコンピュータソフトウェア入社</h3>
+          <p>PM,PL,SE,PGとして従事</p>
         </div>
-      </section>
-
-      <section class="project">
-        <span class="date">2002/04-2004/03</span>
-        <div class="project-info">
-          <h3 class="name">液晶パネル製造管理システム開発</h3>
-          <div class="description">
-            大手家電メーカーの工場内で使用する、液晶パネル製造管理システムの開発
-          </div>
-          <div class="in-charge">
-            <h4>担当範囲</h4>
-            共通機能の設計・実装
-            <ul>
-              <li>Javaアプレット-JavaScript連携機能開発</li>
-              <li>JavaScript共通ライブラリの実装</li>
-            </ul>
-          </div>
-          <div class="detail"></div>
-          <div class="tech">
-            <h4>OS</h4>
-            <ul>
-              <li>Windows</li>
-            </ul>
-            <h4>データベース</h4>
-            <ul>
-              <li>Oracle Database</li>
-            </ul>
-            <h4>アプリケーション サーバー</h4>
-            <ul>
-              <li>Apache&apm;Tomcat</li>
-            </ul>
-            <h4>言語/ライブラリ</h4>
-            <ul>
-              <li>Java</li>
-            </ul>
-          </div>
+      </div>
+      <div class="project">
+        <div class="date">
+          <span class="date-to">2002-03</span>
         </div>
-      </section>
-    </div>
-    <div class='area-footer'>
-      &copy; 2018-2019 Kazunori Kimura
+        <div class="timeline">
+          <i class="fa fa-circle circle"></i>
+          <div class="border"></div>
+        </div>
+        <div class="balloon">
+          <h3>関西大学　総合情報学部　卒業</h3>
+        </div>
+      </div>
+    </section>
+    <h2>お知らせ</h2>
+    <section class="card-container">
+      <div class="card">
+        <img src="image.001.jpeg" alt="udemy" class="card-image">
+        <div class="card-content">
+          <p>Udemy にて <a href="https://www.udemy.com/aspnet-mvcweb/" target="_blank">ASP.NET MVCでWebアプリ開発のノウハウを学ぼう！</a>
+            という講座を公開しています！<br>
+            ASP.NET MVC 5 と EntityFramework 6 によるWebアプリケーション開発をステップ・バイ・ステップで解説しています。</p>
+        </div>
+        <div class="card-link">
+          <a href="https://www.udemy.com/aspnet-mvcweb/" target="_blank">Udemy <i class="fa fa-share-square"></i></a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="presentation_man.png" alt="lt" class="card-image">
+        <div class="card-content">
+          <p>毎月大阪でライトニングトーク会を開催しています。
+            申し込みは connpass からお願いします！</p>
+        </div>
+        <div class="card-link">
+          <a href="https://anket.connpass.com/" target="_blank">connpass <i class="fa fa-share-square"></i></a>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="footer">
+    <p>&copy; 2018-2019 Kazunori Kimura</p>
+    <div class="goTop">
+      <a href="#">
+        <i class="fa fa-chevron-up"></i>
+        TOPへ
+      </a>
     </div>
   </div>
 </body>
